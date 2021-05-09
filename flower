@@ -1,0 +1,72 @@
+from turtle import *
+from random import *
+from time import sleep
+
+def init():
+  setheading(0)
+  speed(0)
+
+def rectangle(x,y,length,height,angle):
+  setheading(angle)
+  place(x,y)
+  hideturtle()
+  begin_fill()
+  forward(length)
+  right(90)
+  forward(height)
+  right(90)
+  forward(length)
+  right(90)
+  forward(height)
+  right(90)
+  end_fill()
+  
+  
+def circle(x,y,r):
+  place(x,y)
+  dot(r)
+  
+def triangle(x,y,length,angle):
+  setheading(angle)
+  place(x,y)
+  hideturtle()
+  
+  begin_fill()
+  forward(length)
+  left(120)
+  left(120)
+  forward(length)
+  end_fill()
+  
+def obtuse_triangle(x,y,length,angle):
+  setheading(angle)
+  place(x,y)
+  hideturtle()
+  
+  begin_fill()
+  left(120)
+  forward(length)
+  left(120)
+  forward(length)
+  forward(length)
+  end_fill()
+  
+def obtuse_triangle_rev(x,y,length,angle):
+  setheading(angle)
+  place(x,y)
+  hideturtle()
+  
+  begin_fill()
+  right(120)
+  forward(length)
+  right(120)
+  forward(length)
+  forward(length)
+  end_fill()
+  
+def place(posX, posY):
+  penup()
+  x = posX
+  y = posY
+  goto(x, y)
+  pendown()
